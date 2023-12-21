@@ -42,7 +42,7 @@
 			<li <?php echo ($activePage === 'profile') ? 'class="active"' : ''; ?>>
 				<a href="profile.php">
                     <i class=' bx bxs-user' ></i>
-					<span class="text">profile</span>
+					<span class="text">Profile</span>
 				</a>
 			</li>
 			<li>

@@ -50,8 +50,6 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 	<script src="js/dashboard.js"></script>
 	<script src="js/copy.js"></script>
 </body>

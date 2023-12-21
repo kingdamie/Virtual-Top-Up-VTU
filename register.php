@@ -85,9 +85,10 @@ if(isset($_POST['submit'])){
         $res = mysqli_query($connect, $sql);
 
         if($res == true){
-            $_SESSION['add'] = "Registeration Successfully";
-            //redirect page to manage admin
-            header("location:".SITEURL.'index.php');
+            $_SESSION['add'] = "<div class='success'>Registeration Successfully</div>";
+            // redirect page to manage admin
+            header("location:login.php");
+            exit();
         }
         else{
             $_SESSION['add'] = "Failed to Register";

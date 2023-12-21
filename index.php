@@ -58,29 +58,11 @@
 						</li>
 					</ul>
 				</div>
-				<!-- <a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download PDF</span>
-				</a> -->
 			</div>
 
 			<ul class="box-info">
-				<!-- <li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>1020</h3>
-						<p>New Order</p>
-					</span>
-				</li>
 				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>2834</h3>
-						<p>Visitors</p>
-					</span>
-				</li> -->
-				<li>
-					<i class='bx bxs-dollar-circle' ></i>
+					<i class='bx' >₦</i>
 					<span class="text">
 						<h3>Available Balance</h3>
 						<p>
@@ -199,7 +181,6 @@
 	</section>
 	<!-- CONTENT -->
 	
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 	<script src="js/dashboard.js"></script>
 	<script src="js/copy.js"></script>
 </body>
