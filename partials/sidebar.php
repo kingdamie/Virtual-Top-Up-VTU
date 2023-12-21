@@ -33,8 +33,8 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li  <?php echo ($activePage === 'trans') ? 'class="active"' : ''; ?>>
+				<a href="transaction-history.php">
                     <i class=' bx bxs-file' ></i>
 					<span class="text">Transaction History</span>
 				</a>
@@ -45,40 +45,40 @@
 					<span class="text">Profile</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li  <?php echo ($activePage === 'data') ? 'class="active"' : ''; ?>>
+				<a href="buy-data.php">
 					<i class='bx bx-wifi' ></i>
 					<span class="text">Buy Data Bundle</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li  <?php echo ($activePage === 'airtime') ? 'class="active"' : ''; ?>>
+				<a href="buy-airtime.php">
 					<i class='bx bx-mobile' ></i>
 					<span class="text">Buy Airtime VTU</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li  <?php echo ($activePage === 'data-cou') ? 'class="active"' : ''; ?>>
+				<a href="data-coupon.php">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Buy MTN Data Coupon</span>
 				</a>
 			</li>
-            <li>
-				<a href="#">
+            <li  <?php echo ($activePage === 'air2cash') ? 'class="active"' : ''; ?>>
+				<a href="airtime2cash.php">
 					<i class='bx bx-sort' ></i>
 					<span class="text">Airtime To Cash</span>
 				</a>
 			</li>
-            <li>
-				<a href="#">
+            <li  <?php echo ($activePage === 'bill') ? 'class="active"' : ''; ?>>
+				<a href="eletricity-bill.php">
 					<i class='bx bx-bulb' ></i>
 					<span class="text">Electricity Bill</span>
 				</a>
 			</li>
 		</ul>
 		<ul class="side-menu">
-			<li>
-				<a href="#">
+			<li  <?php echo ($activePage === 'setting') ? 'class="active"' : ''; ?>>
+				<a href="settings.php">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">Settings</span>
 				</a>
