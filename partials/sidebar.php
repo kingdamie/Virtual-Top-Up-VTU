@@ -27,7 +27,7 @@
             </div>
         </div>
 		<ul class="side-menu top" id="sidebarMenu">
-			<li>
+			<li <?php echo ($activePage === 'dashboard') ? 'class="active"' : ''; ?>>
 				<a href="index.php">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
@@ -39,7 +39,7 @@
 					<span class="text">Transaction History</span>
 				</a>
 			</li>
-			<li>
+			<li <?php echo ($activePage === 'profile') ? 'class="active"' : ''; ?>>
 				<a href="profile.php">
                     <i class=' bx bxs-user' ></i>
 					<span class="text">profile</span>
@@ -90,5 +90,6 @@
 				</a>
 			</li>
 		</ul>
+
 	</section>
 	<!-- SIDEBAR -->

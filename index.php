@@ -1,4 +1,5 @@
-<?php 
+<?php
+	$activePage = 'dashboard';
     include('config/constants.php'); 
     include('partials/login-check.php');
 ?>
@@ -15,8 +16,7 @@
 	<link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/session.css">
     <link rel="stylesheet" href="css/sidebar.css">
-	<!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
 
 	<title>Dashboard</title>

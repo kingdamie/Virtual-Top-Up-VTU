@@ -1,38 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const allSideMenu = document.querySelectorAll("#sidebar .side-menu.top li a");
-
-//   allSideMenu.forEach((item) => {
-//     item.addEventListener("click", function () {
-//       // Remove "active" class from all items
-//       allSideMenu.forEach((i) => {
-//         i.parentElement.classList.remove("active");
-//       });
-
-//       // Add "active" class to the clicked item's parent <li> element
-//       const li = item.parentElement;
-//       li.classList.add("active");
-//     });
-//   });
-// });
-
-
- // jQuery code to add "active" class based on the current page URL
-    $(document).ready(function () {
-        // Get the current page URL
-        var currentUrl = window.location.href;
-
-        // Select all li elements inside the sidebarMenu
-        $('#sidebarMenu li').each(function () {
-            // Get the href attribute of the anchor tag inside the li
-            var menuUrl = $(this).find('a').attr('href');
-
-            // Check if the current page URL contains the menu URL
-            if (currentUrl.indexOf(menuUrl) !== -1) {
-                // Add the "active" class to the matching li element
-                $(this).addClass('active');
-            }
-        });
-    });
 // TOGGLE SIDEBAR
 const menuBar = document.querySelector("#content nav .bx.bx-menu");
 const sidebar = document.getElementById("sidebar");
