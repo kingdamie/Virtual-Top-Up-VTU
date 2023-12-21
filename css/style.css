@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* menu bar  */
+.menu-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 2px 0;
+  transition: transform 0.5s;
+}
+
+/* header  */
+.container{
+    display: flex;
+}
+
+.sidebar {
+    flex: 0.2;
+  background-color: #eee;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: flex 400ms ease;
+}
+
+.sidebar a:hover {
+  color: #666;
+}
+
+.inner-container {
+    flex: 0.8;
+  padding: 20px;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.menu-button {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:hover {
+  background-color: #444;
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+.main-content {
+  /* ... additional styles for main content elements ... */
+}
+@media (max-width: 768px){
+    
+}

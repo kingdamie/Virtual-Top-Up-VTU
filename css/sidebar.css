@@ -1,0 +1,18 @@
+#sidebar .about-user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+#sidebar .about-user a img{
+    width: 3rem;
+    border-radius: 50%;
+    height: 3rem;
+}
+#sidebar .about-user .detail p{
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}

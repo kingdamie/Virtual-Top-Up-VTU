@@ -1,0 +1,18 @@
+/* Session messages */
+.success,
+.error {
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 3px;
+	margin-bottom: 15px;
+}
+
+.success {
+	background-color: #f0f9ef;
+	color: #2ecc71;
+}
+
+.error {
+	background-color: #fff0f0;
+	color: #f3565d;
+}
