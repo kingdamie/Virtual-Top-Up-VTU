@@ -75,7 +75,7 @@
                                 while($rows =mysqli_fetch_assoc($res)){
                                     $id = $rows['id'];
                                     $balance = $rows['balance'];
-                                    echo "₦$balance";
+                                    echo "₦ $balance";
                                 }
                             }
                             ?>

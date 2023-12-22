@@ -39,10 +39,10 @@
 					<span class="text">Transaction History</span>
 				</a>
 			</li>
-			<li <?php echo ($activePage === 'profile') ? 'class="active"' : ''; ?>>
-				<a href="profile.php">
-                    <i class=' bx bxs-user' ></i>
-					<span class="text">Profile</span>
+			<li <?php echo ($activePage === 'generatepin') ? 'class="active"' : ''; ?>>
+				<a href="generatepin.php">
+                    <i class='bx bx-pin' ></i>
+					<span class="text">Generate Pin</span>
 				</a>
 			</li>
 			<li  <?php echo ($activePage === 'data') ? 'class="active"' : ''; ?>>

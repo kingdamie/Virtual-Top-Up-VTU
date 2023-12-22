@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--light);
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
     gap: 10px;
     margin-top: -20px;
@@ -44,6 +44,9 @@ body {
     padding: 5px;
     border-radius: 10px;
     align-items: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -53,6 +56,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .box-info .network .box span{
     color: var(--dark);
     cursor: not-allowed;
+}
+.box-info .network .box input{
+    width: 100%;
 }
 .box-info .network .box input, .box-info .network.nt .box{
     outline: none;
@@ -66,7 +72,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 500;
 }
 .box-info .network.nt .box{
-    width: 80%;
+    /* width: 80%; */
 
 }
 
@@ -85,11 +91,13 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: var(--light);
     padding: 20px;
     border-radius: 20px;
-    margin-top: 20px;    
+    margin-top: 20px; 
+  
 }
 
   /* Style for the select element */
 select {
+    
     padding: 10px;
     font-size: 16px;
     border-radius: 12px;
@@ -102,3 +110,11 @@ option {
     background-color: var(--light);
     color: var(--dark);
 }
+
+
+@media screen and (max-width: 576px) {
+    .box-info .network h4{
+    font-size: 14px;
+}
+}
+
