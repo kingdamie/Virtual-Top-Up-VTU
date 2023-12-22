@@ -13,9 +13,25 @@
 				<i class='bx bxs-bell' ></i>
 				<span class="num">8</span>
 			</a>
-			<a href="profile.php" class="profile">
-                    <i class=' bx bxs-user' ></i>
-			</a>
+			<div class="profile">
+                <i class='bx bxs-user'></i>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            
+                            <a href="profile.php"><i class='bx bxs-user'></i>Profile</a>
+                        </li><hr>
+                        <li>
+                            
+                            <a href="settings.php"><i class='bx bxs-cog' ></i>Settings</a>
+                        </li><hr>
+                        <li class="logout">
+                            <a href="logout.php">
+                                <i class='bx bxs-log-out-circle' ></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
 		</nav>
 
 		<script>

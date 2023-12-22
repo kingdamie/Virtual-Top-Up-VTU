@@ -48,7 +48,61 @@ body {
 
 
 
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+.profile i{
+	color: var(--dark);
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    /* transform: translateX(-60%); */
+	width: 200px;
+    background-color: var(--light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.dropdown hr{
+	margin: 2px;
+}
+.profile:hover .dropdown {
+    display: block;
+}
 
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 10px;
+    text-align: center;
+	
+}
+.dropdown .logout a, .dropdown .logout a i{
+	color: var(--red) !important;
+}
+.dropdown li a{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+    color: var(--dark);
+}
 
 /* SIDEBAR */
 #sidebar {

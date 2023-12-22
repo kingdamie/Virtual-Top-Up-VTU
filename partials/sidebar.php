@@ -77,18 +77,19 @@
 			</li>
 		</ul>
 		<ul class="side-menu">
-			<li  <?php echo ($activePage === 'setting') ? 'class="active"' : ''; ?>>
-				<a href="settings.php">
+			<li  <?php echo ($activePage === 'atmdep') ? 'class="active"' : ''; ?>>
+				<a href="atm-deposit.php">
 					<i class='bx bxs-cog' ></i>
-					<span class="text">Settings</span>
+					<span class="text">ATM Deposit</span>
 				</a>
 			</li>
-			<li>
-				<a href="logout.php" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
+			<li  <?php echo ($activePage === 'auto') ? 'class="active"' : ''; ?>>
+				<a href="automated-trans.php">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Automated Transfer</span>
 				</a>
 			</li>
+			
 		</ul>
 
 	</section>

@@ -45,22 +45,18 @@
                     <div class="network">
                         <h4>Phone Number:</h4>
                         <div class="box">
-                            <span>+234</span>
+                            <span class="index">+234</span>
                             <input type="number">
                         </div>
                     </div>
-                </div>
 
-                <div class="box-info">
                     <div class="network nt">
                         <h4>Network:</h4>
                         <div class="box" style="cursor: not-allowed;">
                             <span>MTN</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="box-info">
                     <div class="network nt">
                         <h4>Data Bundle:</h4>
                         <select class="box" id="customSelect" name="customSelect">
@@ -72,9 +68,7 @@
                             <option value="option6">₦1000 = 3GB</option>
                         </select>
                     </div>
-                </div>
 
-                <div class="box-info">
                     <div class="network nt">
                         <h4>Amount:</h4>
                         <div class="box" style="cursor: not-allowed;">
@@ -82,6 +76,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <center><input type="button" class="primary-btn" value="Buy" id="openModalButton1"></center>
             </form>

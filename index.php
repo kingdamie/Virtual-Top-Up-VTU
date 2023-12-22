@@ -130,13 +130,13 @@
 					</div>
 					<ul class="todo-list">
 						<li class="completed">
-							<a href="#">
+							<a href="buy-airtime.php">
                                 <img src="images/airtime.svg" alt="airtime2cash">
                                 <span>Airtime Topup</span>
                             </a>
 						</li>
 						<li class="not-completed">
-							<a href="#">
+							<a href="buy-data.php">
                                 <img src="images/data.jpg" alt="airtime2cash">
                                 <span>Buy Data</span>
                             </a>
@@ -148,13 +148,13 @@
                             </a>
 						</li>
 						<li class="not-completed">
-							<a href="#">
+							<a href="airtime2cash.php">
                                 <img src="images/airtime2cash.jpg" alt="airtime2cash">
                                 <span>Airtime to Cash</span>
                             </a>
 						</li>
 						<li class="completed">
-							<a href="#">
+							<a href="eletricity-bill.php">
                                 <img src="images/utility.jpg" alt="airtime2cash">
                                 <span>Electricity Bill</span>
                             </a>
