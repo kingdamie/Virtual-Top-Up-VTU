@@ -72,13 +72,14 @@
     <!-- CONTENT -->
 
     <!-- Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal success">
         <!-- Modal content -->
         <div class="modal-content" style="text-align:center;">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div style="text-align:center; display:flex; flex-direction:column; justify-content: center;    align-items: center;  ">
-                <img src="images/gif.gif" alt="" width="50%" height="50%" style="border-radius:50%;">
-                <a href="index.php" style="color: var(--dark); margin-top:10px;">OK</a>
+            <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+            <div class="con" >
+                <img src="images/gif.gif" alt="" width="50%" height="50%">
+                <p>Pin Successfully Created</p>
+                <a href="index.php">OK</a>
             </div>
         </div>
     </div>

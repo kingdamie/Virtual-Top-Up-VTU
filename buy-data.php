@@ -83,7 +83,7 @@
                     </div>
                 </div>
 
-                <center><input type="button" class="primary-btn" value="Buy" id="buyButton"></center>
+                <center><input type="button" class="primary-btn" value="Buy" id="openModalButton1"></center>
             </form>
         </main>
         <!-- MAIN -->
@@ -91,20 +91,64 @@
     <!-- CONTENT -->
 
     <!-- Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal1" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" id="closeModal1">&times;</span>
             <form action="" method="post" class="modal-form"  id="firstModalForm">
                 <h4>Pin</h4>
                 <input type="number" placeholder="PIN">
-                <input type="submit" value="OK">
+                
+                <center><input class="button" type="button" value="OK" id="openModalButton2FromModal1"></center>
             </form>
         </div>
     </div>
 
+    <div id="myModal2" class="modal success">
+        <div class="modal-content">
+            <div class="con" >
+                <img src="images/gif.gif" alt="" width="50%" height="50%">
+                <p>Transaction Successfully </p>
+                <a href="index.php">OK</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openModalButton1 = document.getElementById('openModalButton1');
+            const myModal1 = document.getElementById('myModal1');
+            const closeModal1 = document.getElementById('closeModal1');
+            const openModalButton2FromModal1 = document.getElementById('openModalButton2FromModal1');
+            const myModal2 = document.getElementById('myModal2');
+            
+            openModalButton1.addEventListener('click', function () {
+                myModal1.style.display = 'block';
+            });
+
+            closeModal1.addEventListener('click', function () {
+                myModal1.style.display = 'none';
+            });
+
+            openModalButton2FromModal1.addEventListener('click', function () {
+                myModal1.style.display = 'none';
+                myModal2.style.display = 'block';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === myModal1) {
+                myModal1.style.display = 'none';
+                }
+            });
+            closeModal2.addEventListener('click', function () {
+                myModal2.style.display = 'none';
+            });
+
+        });
+
+
+    </script>
     <script src="js/dashboard.js"></script>
     <script src="js/copy.js"></script>
-    <script src="js/modal.js"></script>
 </body>
 </html>

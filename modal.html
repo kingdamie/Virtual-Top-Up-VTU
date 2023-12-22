@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    
+<button id="openModalButton1">Open Modal 1</button>
+<button id="openModalButton2">Open Modal 2</button>
+
+<div id="myModal1" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal1">&times;</span>
+    <p>This is the content for Modal 1.</p>
+    <button id="openModalButton2FromModal1">Open Modal 2 from Modal 1</button>
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal2">&times;</span>
+    <p>This is the content for Modal 2.</p>
+  </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  const openModalButton1 = document.getElementById('openModalButton1');
+  const myModal1 = document.getElementById('myModal1');
+  const closeModal1 = document.getElementById('closeModal1');
+  const openModalButton2FromModal1 = document.getElementById('openModalButton2FromModal1');
+
+  openModalButton1.addEventListener('click', function () {
+    myModal1.style.display = 'block';
+  });
+
+  closeModal1.addEventListener('click', function () {
+    myModal1.style.display = 'none';
+  });
+
+  openModalButton2FromModal1.addEventListener('click', function () {
+    myModal1.style.display = 'none';
+    myModal2.style.display = 'block';
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target === myModal1) {
+      myModal1.style.display = 'none';
+    }
+  });
+
+  const openModalButton2 = document.getElementById('openModalButton2');
+  const myModal2 = document.getElementById('myModal2');
+  const closeModal2 = document.getElementById('closeModal2');
+
+  openModalButton2.addEventListener('click', function () {
+    myModal2.style.display = 'block';
+  });
+
+  closeModal2.addEventListener('click', function () {
+    myModal2.style.display = 'none';
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target === myModal2) {
+      myModal2.style.display = 'none';
+    }
+  });
+});
+
+
+    </script>
+</body>
+</html>

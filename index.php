@@ -85,7 +85,7 @@
                 
                 <div class="link">
                     <a href="#"><i class='bx bx-plus' ></i>Add Money</a>
-                    <a href="#"><i class='bx bx-chevrons-left' ></i>Transaction</a>
+                    <a href="transaction.php"><i class='bx bx-chevrons-left' ></i>Transaction</a>
                 </div>
 			</ul>
 
