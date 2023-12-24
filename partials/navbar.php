@@ -16,15 +16,25 @@
 			<div class="profile">
                 <i class='bx bxs-user'></i>
                 <div class="dropdown">
+                    <?php
+                    $id = $_SESSION['user'];
+                    $sql = "SELECT * FROM tbl_user WHERE id = '$id'";
+                    $res = mysqli_query($connect, $sql);
+                    $count = mysqli_num_rows($res); // function to get all the rows in database
+                    if($count>0){
+                        while($rows =mysqli_fetch_assoc($res)){
+                            $id = $rows['id'];
+                            ?>
                     <ul>
                         <li>
-                            
-                            <a href="profile.php"><i class='bx bxs-user'></i>Profile</a>
+                            <a href="profile.php?id=<?php  echo $id?>"><i class='bx bxs-user'></i>Profile</a>
                         </li><hr>
                         <li>
-                            
-                            <a href="settings.php"><i class='bx bxs-cog' ></i>Settings</a>
-                        </li><hr>
+                            <a href="settings.php?id=<?php  echo $id?>"><i class='bx bxs-cog' ></i>Settings</a>
+                        </li><hr><?php
+                        }
+                    }
+                    ?>
                         <li class="logout">
                             <a href="logout.php">
                                 <i class='bx bxs-log-out-circle' ></i>Logout</a>

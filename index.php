@@ -67,8 +67,8 @@
 						<h3>Available Balance</h3>
 						<p>
                             <?php
-                            $username = $_SESSION['user'];
-                            $sql = "SELECT * FROM tbl_user WHERE username = '$username'";
+                            $id = $_SESSION['user'];
+                            $sql = "SELECT * FROM tbl_user WHERE id = '$id'";
                             $res = mysqli_query($connect, $sql);
                             $count = mysqli_num_rows($res); // function to get all the rows in database
                             if($count>0){

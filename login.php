@@ -52,18 +52,22 @@ if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM tbl_user WHERE username='$username' AND password='$password'";
+    $sql = "SELECT id, username FROM tbl_user WHERE username='$username' AND password='$password'";
 
     $res = mysqli_query($connect, $sql);
 
     // count rowa to check whether the user exists or not
     $count = mysqli_num_rows($res);
 
+    // to pass the id as url 
+     $row = mysqli_fetch_assoc($res);
+
+
     if($count==1){
         //User Available and Login Success
         $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
-        $_SESSION['user'] = $username; // to check whether the user is logged in or not and logout will unset it
-        header("location:".SITEURL.'index.php');
+        $_SESSION['user'] = $row['id']; // to check whether the user is logged in or not and logout will unset it
+        header("location:" . SITEURL . 'index.php?id=' . $row['id']);
     }else{
         //User not Available and Login Fail
         $_SESSION['login'] = "<div class='error'>Username or Password did not match.</div>";

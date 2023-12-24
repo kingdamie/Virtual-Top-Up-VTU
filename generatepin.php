@@ -52,11 +52,13 @@
             <form action="" method="POST">
                 <div class="box-info">
                     <div class="network" style="display:block;">
+                        <h4>New Pin:</h4>
                         <div class="box">
                             <input type="number" name="pin" placeholder="New Pin (5 digit)" required>
                         </div>
                     </div>
                     <div class="network" style="display:block;">
+                        <h4>Confirm Pin:</h4>
                         <div class="box">
                             <input type="number" name="confirm-pin" placeholder="Confirm Pin (5 digit)" required>
                         </div>
