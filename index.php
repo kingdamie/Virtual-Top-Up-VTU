@@ -85,7 +85,7 @@
                 
                 <div class="link">
                     <a href="#"><i class='bx bx-plus' ></i>Add Money</a>
-                    <a href="transaction.php"><i class='bx bx-chevrons-left' ></i>Transaction</a>
+                    <a href="transaction-history.php?id=<?php echo $id?>"><i class='bx bx-chevrons-left' ></i>Transaction</a>
                 </div>
 			</ul>
 
@@ -130,13 +130,13 @@
 					</div>
 					<ul class="todo-list">
 						<li class="completed">
-							<a href="buy-airtime.php">
+							<a href="buy-airtime.php?id=<?php echo $id?>">
                                 <img src="images/airtime.svg" alt="airtime2cash">
                                 <span>Airtime Topup</span>
                             </a>
 						</li>
 						<li class="not-completed">
-							<a href="buy-data.php">
+							<a href="buy-data.php?id=<?php echo $id?>">
                                 <img src="images/data.jpg" alt="airtime2cash">
                                 <span>Buy Data</span>
                             </a>
@@ -148,13 +148,13 @@
                             </a>
 						</li>
 						<li class="not-completed">
-							<a href="airtime2cash.php">
+							<a href="airtime2cash.php?id=<?php echo $id?>">
                                 <img src="images/airtime2cash.jpg" alt="airtime2cash">
                                 <span>Airtime to Cash</span>
                             </a>
 						</li>
 						<li class="completed">
-							<a href="eletricity-bill.php">
+							<a href="eletricity-bill.php?id=<?php echo $id?>">
                                 <img src="images/utility.jpg" alt="airtime2cash">
                                 <span>Electricity Bill</span>
                             </a>

@@ -116,6 +116,12 @@
     <p>No matching records found.</p>
 </div>
 
+ <div class="pagination">
+        <button onclick="prevPage()">Previous</button>
+        <span id="currentPage">1</span>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
 <script>
     function searchTable() {
         const input = document.getElementById("searchInput").value.toLowerCase(); // Get the search input and convert to lowercase
@@ -162,6 +168,63 @@
             messageRow.style.display = ""; // Show the message row
         }
     }
+	 // Define variables for pagination
+        const rowsPerPage = 5;
+        let currentPage = 1;
+        const table = document.getElementById("myTable");
+        const rows = table.querySelectorAll("tr:not(:first-child)");
+
+        function showRows(start, end) {
+            rows.forEach((row, index) => {
+                if (index >= start && index < end) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+            document.getElementById("currentPage").textContent = currentPage;
+
+            if (currentPage === 1) {
+                document.querySelector(".pagination button:first-child").disabled = true;
+            } else {
+                document.querySelector(".pagination button:first-child").disabled = false;
+            }
+
+            if (currentPage === totalPages) {
+                document.querySelector(".pagination button:last-child").disabled = true;
+            } else {
+                document.querySelector(".pagination button:last-child").disabled = false;
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                const start = (currentPage - 1) * rowsPerPage;
+                const end = start + rowsPerPage;
+                showRows(start, end);
+                updatePagination();
+            }
+        }
+
+        function nextPage() {
+            const totalPages = Math.ceil(rows.length / rowsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                const start = (currentPage - 1) * rowsPerPage;
+                const end = start + rowsPerPage;
+                showRows(start, end);
+                updatePagination();
+            }
+        }
+
+        // Initial display
+        showRows(0, rowsPerPage);
+        updatePagination();
 </script>
 
 	<script src="js/dashboard.js"></script>
