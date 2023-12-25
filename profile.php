@@ -33,6 +33,12 @@
                 if($count==1){
                     $rows = mysqli_fetch_assoc($res);
                     $current_image = $rows['image_name'];
+                    $first_name = $rows['first_name'];
+                    $last_name = $rows['last_name'];
+                    $gmail = $rows['gmail'];
+                    $username = $rows['username'];
+                    $phone_number = $rows['phone_number'];
+
                 }
                 else{
                     $_SESSION['no-category-found'] = "<div class='error'>Not image Found</div>";
@@ -92,7 +98,7 @@
                         <?php
                             if($current_image!= ""){
                                 ?>
-                                <img src="<?php echo SITEURL; ?>images/profiles/<?php echo $current_image?>" alt="<?php echo $current_image?>" width="100px">
+                                <center><img src="<?php echo SITEURL; ?>images/profiles/<?php echo $current_image?>" alt="<?php echo $current_image?>" width="100px" height="100px"></center>
                                 <?php
                             }
                             else{
@@ -100,15 +106,12 @@
                             }
                         ?>
                     </div>
-                
-                
-                    <label for="">Edit profile picture</label>
                     <input type="file" name="image">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
                     <input type="submit" name="submit" value="upload">
                 </form>
-
+                <br>
                 <?php
                 if(isset($_POST['submit'])){
                     $id = $_POST['id'];
@@ -182,17 +185,18 @@
                 ?>
 
                 <div class="profile-info">
-                    <label>Full Name:</label>
-                    <span>User Full Name</span>
-
-                    <label>Email:</label>
-                    <span>user@example.com</span>
-
-                    <label>Username:</label>
-                    <span>username123</span>
-
-                    <label>Password:</label>
-                    <span>*********</span>
+                    <div>
+                        <label>Full Name:</label>
+                        <span><?php echo "$last_name $first_name" ;?></span>
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <span><?php echo "$gmail" ;?></span>
+                    </div>
+                    <div>
+                        <label>Username:</label>
+                        <span><?php echo "$username" ;?></span>
+                    </div>
                 </div>
 
                 <button class="edit-button" onclick="editProfile()">Edit Profile</button>
