@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
         //User Available and Login Success
         $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
         $_SESSION['user'] = $row['id']; // to check whether the user is logged in or not and logout will unset it
-        header("location:" . SITEURL . 'index.php?id=' . $row['id']);
+        header("location:" . SITEURL . 'index.php');
     }else{
         //User not Available and Login Fail
         $_SESSION['login'] = "<div class='error'>Username or Password did not match.</div>";

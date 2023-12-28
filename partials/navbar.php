@@ -27,10 +27,10 @@
                             ?>
                     <ul>
                         <li>
-                            <a href="profile.php?id=<?php  echo $id?>"><i class='bx bxs-user'></i>Profile</a>
+                            <a href="profile.php"><i class='bx bxs-user'></i>Profile</a>
                         </li><hr>
                         <li>
-                            <a href="settings.php?id=<?php  echo $id?>"><i class='bx bxs-cog' ></i>Settings</a>
+                            <a href="settings.php"><i class='bx bxs-cog' ></i>Settings</a>
                         </li><hr><?php
                         }
                     }

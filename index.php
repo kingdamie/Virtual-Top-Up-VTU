@@ -87,6 +87,11 @@
                     <a href="#"><i class='bx bx-plus' ></i>Add Money</a>
                     <a href="transaction-history.php?id=<?php echo $id?>"><i class='bx bx-chevrons-left' ></i>Transaction</a>
                 </div>
+
+                <div class="link" >
+                    <p>Referral Code: <span id="textToCopy4">Ql$w3PoZ-eF4</span> <iconify-icon icon="ph:copy" onclick="copyText('textToCopy4', 'copyMessage4')"></iconify-icon></p>
+                    <div id="copyMessage4" class="copymessage" style="display: none;"></div>
+                </div>
 			</ul>
 
 
@@ -130,31 +135,31 @@
 					</div>
 					<ul class="todo-list">
 						<li class="completed">
-							<a href="buy-airtime.php?id=<?php echo $id?>">
+							<a href="buy-airtime.php">
                                 <img src="images/airtime.svg" alt="airtime2cash">
                                 <span>Airtime Topup</span>
                             </a>
 						</li>
 						<li class="not-completed">
-							<a href="buy-data.php?id=<?php echo $id?>">
+							<a href="buy-data.php">
                                 <img src="images/data.jpg" alt="airtime2cash">
                                 <span>Buy Data</span>
                             </a>
 						</li>
 						<li class="completed">
-							<a href="#">
+							<a href="referral.php">
                                 <img src="images/fundacc.jpeg" alt="airtime2cash">
                                 <span>Referral bonus</span>
                             </a>
 						</li>
 						<li class="not-completed">
-							<a href="airtime2cash.php?id=<?php echo $id?>">
+							<a href="airtime2cash.php">
                                 <img src="images/airtime2cash.jpg" alt="airtime2cash">
                                 <span>Airtime to Cash</span>
                             </a>
 						</li>
 						<li class="completed">
-							<a href="eletricity-bill.php?id=<?php echo $id?>">
+							<a href="eletricity-bill.php">
                                 <img src="images/utility.jpg" alt="airtime2cash">
                                 <span>Electricity Bill</span>
                             </a>

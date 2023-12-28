@@ -22,32 +22,28 @@
 </head>
 
         <?php
-            if(isset($_GET['id'])){
-                //1. get the id of selected admin
-                $id = $_GET['id'];
-                //2. create sql Query to get details
-                $sql = "SELECT * FROM tbl_user WHERE id=$id";
-                //execute the Query
-                $res=mysqli_query($connect,$sql);
-                $count = mysqli_num_rows($res);
-                if($count==1){
-                    $rows = mysqli_fetch_assoc($res);
-                    $current_image = $rows['image_name'];
-                    $first_name = $rows['first_name'];
-                    $last_name = $rows['last_name'];
-                    $gmail = $rows['gmail'];
-                    $username = $rows['username'];
-                    $phone_number = $rows['phone_number'];
+            $id = $_SESSION['user']; // Use session variable as the user ID
 
-                }
-                else{
-                    $_SESSION['no-category-found'] = "<div class='error'>Not image Found</div>";
-                    header('location:'.SITEURL.'settings.php');
-                }
+        if(isset($id)){
+            // Retrieve user details based on the user ID
+            $sql = "SELECT * FROM tbl_user WHERE id=$id";
+            $res = mysqli_query($connect, $sql);
+
+            if(mysqli_num_rows($res) == 1){
+                $rows = mysqli_fetch_assoc($res);
+                $current_image = $rows['image_name'];
+                $first_name = $rows['first_name'];
+                $last_name = $rows['last_name'];
+                $gmail = $rows['gmail'];
+                $username = $rows['username'];
+                $phone_number = $rows['phone_number'];
+            } else {
+                $_SESSION['no-category-found'] = "<div class='error'>User not found</div>";
+                header('location:'.SITEURL.'settings.php');
             }
-            else{
-                header('loction:'.SITEURL.'index.php');
-                }
+        } else {
+            header('location:'.SITEURL.'index.php');
+        }
 ?>
 <body>
 	<!-- sidebar  -->
@@ -142,7 +138,6 @@
 
                         if($upload == false){
                             $_SESSION['upload']= "<div class='error'>Failed to upload image</div>";
-                            header("location:".SITEURL.'admin/add-category.php');
                             //stop the process
                             die();
                         }
