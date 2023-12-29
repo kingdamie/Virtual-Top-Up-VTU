@@ -79,25 +79,38 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
+    // Check if the Gmail address already exists
+    $check_query = "SELECT * FROM tbl_user WHERE gmail = '$gmail'";
+    $check_result = mysqli_query($connect, $check_query);
+
+    if(mysqli_num_rows($check_result) > 0){
+        // Gmail address already exists
+        $_SESSION['add'] = "<div class='error'>This Gmail address is already registered.</div>";
+        header("location:".SITEURL.'register.php');
+        exit();
+    }
+
+    // Continue with the registration if the Gmail address is not found
     if($password === $confirm_password){
         $sql = "INSERT INTO tbl_user(first_name, last_name, phone_number, username , gmail, password ) VALUES ('$first_name', '$last_name', '$phone_number', '$username' , '$gmail', '$password')";
 
         $res = mysqli_query($connect, $sql);
 
         if($res == true){
-            $_SESSION['add'] = "<div class='success'>Registeration Successfully</div>";
-            // redirect page to manage admin
+            $_SESSION['add'] = "<div class='success'>Registration Successful</div>";
+            // redirect page to the login page
             header("location:login.php");
             exit();
+        } else {
+            $_SESSION['add'] = "<div class='error'>Failed to Register</div>";
+            // redirect page to the registration page
+            header("location:".SITEURL.'register.php');
+            exit();
         }
-        else{
-            $_SESSION['add'] = "Failed to Register";
-            //redirect page to manage admin
-            header("location:".SITEURL.'login.php');
-        }
-    }else{
+    } else {
         $_SESSION['password'] = "<div class='error'>Password doesn't match.</div>";
         header("location:".SITEURL.'register.php');
+        exit();
     }
 }
 ?>
